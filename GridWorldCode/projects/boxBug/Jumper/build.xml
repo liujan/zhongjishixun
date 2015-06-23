@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="JumperTest" default="junit" basedir=".">
+	<target name="clean">
+		<delete file="Jumper.class" />
+		<delete file="JumperRunner.class" />
+		<delete file="JumperTest.class" />
+	</target>
+	<target name="compile" depends="clean">
+		<javac srcdir="." destdir=".">
+			<classpath>
+				<pathelement path="junit-4.9.jar" />
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="junit" depends="compile">
+		<junit printsummary="true" showoutput="true">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+				<pathelement path="junit-4.9.jar" />
+				<pathelement path="." />
+			</classpath>
+			<test name="JumperTest.java"></test>
+		</junit>
+	</target>
+</project>
+

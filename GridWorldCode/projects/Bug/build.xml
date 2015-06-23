@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project name="copygif" default="moveclass" basedir=".">
+	<target name="copyg" depends="compile">
+		<copy file="Actor.gif" todir="info/gridworld/actor/" />
+		<copy file="BoxBug.gif" todir="info/gridworld/actor/" />
+		<copy file="Bug.gif" todir="info/gridworld/actor/" />
+		<copy file="Critter.gif" todir="info/gridworld/actor/" />
+		<copy file="Flower.gif" todir="info/gridworld/actor/" />
+		<copy file="Rock.gif" todir="info/gridworld/actor" />
+		<copy file="GridWorld.gif" todir="info/gridworld/gui/" />
+		<copy file="BoundedGrid.gif" todir="info/gridworld/grid/" />
+		<copy file="UnboundedGrid.gif" todir="info/gridworld/grid/" />
+		<copy file="WorldFrameResources.properties" todir="info/gridworld/gui/" />
+	</target>
+	<target name="compile" depends="clean">
+		<javac srcdir="." destdir="." />
+	</target>
+	<target name="clean">
+		<delete dir="info" />
+		<delete file="info/*" />
+		<delete file="*.class" />
+	</target>
+	
+	<target name="moveclass" depends="copyg">
+		<move file="JumperRunner.class" todir="1/" />
+		<move file="SpiralBugRunner.class" todir="1/" />
+		<move file="ZBugRunner.class" todir="1/" />
+		<move file="DancingBugRunner.class" todir="1/" />
+		<move file="BoxBugRunner.class" todir="1/" />
+		<move file="BugRunner.class" todir="1/" />
+	</target>
+
+</project>
+
+		

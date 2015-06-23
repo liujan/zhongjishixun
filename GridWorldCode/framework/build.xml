@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<project name="newCritter" default="NewCritterRunner" basedir=".">
+
+	<target name="compile" depends="clean">
+		<javac srcdir="." destdir=".">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</javac>
+
+	</target>
+</project>
+

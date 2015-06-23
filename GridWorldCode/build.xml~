@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<project name="Jump" default="run" basedir=".">
+	<target name="Jumper">
+		<java classname="JumperRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="DancingBugRunner">
+		<java classname="DancingBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="ZBugRunner">
+		<java classname="ZBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="SpiralBugRunner">
+		<java classname="SpiralBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="BoxBugRunner">
+		<java classname="BoxBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="BugRunner">
+		<java classname="BugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+</project>
+

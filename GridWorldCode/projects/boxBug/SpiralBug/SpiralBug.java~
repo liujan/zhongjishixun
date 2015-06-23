@@ -1,0 +1,33 @@
+package info.gridworld.actor;
+import info.gridworld.actor.Bug;
+
+public class SpiralBug extends Bug
+{
+	//表示移动的步数
+	private int steps;
+	//表示移动的边长
+	private int sideLength;
+
+	public SpiralBug(int length)
+	{
+		//初始化计数
+		sideLength = length;
+		steps = 0;
+	}
+	public void act()
+	{
+		if (steps <= sideLength && canMove())
+		{
+			move();
+			steps++;
+		}
+		else 
+		{
+			turn();
+			turn();
+			sideLength ++;
+			steps = 0;
+		}
+	
+	}
+}

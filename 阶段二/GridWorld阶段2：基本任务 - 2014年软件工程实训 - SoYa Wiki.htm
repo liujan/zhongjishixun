@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003 -->
+<html class="splitter-invoked"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki</title>
+
+        
+
+                        
+    
+                        
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use AJS.Confluence.getContextPath() -->
+<meta id="confluence-context-path" name="confluence-context-path" content="/wiki">
+<meta id="confluence-base-url" name="confluence-base-url" content="http://my.ss.sysu.edu.cn/wiki">
+
+<meta id="atlassian-token" name="atlassian-token" content="126b224861e6095a620146faa63442df742a7e8e">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="14set">
+<script type="text/javascript">
+    // Deprecated global variables. To be removed in a future version of Confluence.
+    var contextPath = '/wiki';
+</script>
+
+    
+
+<!-- include system css resources -->
+
+
+    <link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/811/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<!--[if IE 9]>
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/811/_/download/superbatch/css/batch.css?conditionalComment=IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/811/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(1).css" media="print">
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(2).css" media="all">
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(3).css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/d171aed0720e84a2e614f8e66074bc33/_/download/contextbatch/css/viewcontent,main/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(4).css" media="all">
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/com.atlassian.confluence.plugins.pagetree-pagetree-resources.css" media="all">
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/default-theme.css" media="all">
+<link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/splitter.css" media="all">
+
+<!-- end system css resources -->
+
+    <meta name="confluence-request-time" content="1406108017977">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use atl.header -->
+        
+            <script type="text/x-template" title="share-content-popup">
+    <form action="#" method="post" class="aui share-content-popup">
+        <fieldset>
+            <label for="users">User name or email</label>
+            <div class="autocomplete-user-target">
+                <input class="text autocomplete-sharepage" id="users" data-max="10" data-dropdown-target=".autocomplete-user-target" data-none-message="No matching user or email found"/>
+            </div>
+            <ol class="recipients">
+            </ol>
+            <div><label for="note">Note</label></div>
+            <textarea class="textarea" id="note" placeholder="Add an optional note"/>
+        </fieldset>
+        <div class="button-panel">
+            <div class="progress-messages-icon"></div>
+            <div class="progress-messages">
+            </div>
+            <input class="button submit" type="submit" value="Share" disabled/>
+            <a class="close-dialog" href="#">Cancel</a>
+        </div>
+    </form>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-username">
+    <li data-username="{username}" style="display: none">
+        <span>
+            <img src="{thumbnailLink.href}" title="{title}">
+            <span>{title}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-email">
+    <li data-email="{email}" style="display: none">
+        <span>
+            <img src="{icon}" title="{email}">
+            <span>{email}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+    
+        
+            <meta name="ajs-keyboardshortcut-hash" content="e1b0d7adeb104201ccf044f43b88ac0">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            
+    
+    
+            <meta name="ajs-page-id" content="304841003">
+            <meta name="ajs-page-title" content="GridWorld阶段2：基本任务">
+            <meta name="ajs-parent-page-title" content="GridWorld">
+            <meta name="ajs-parent-page-id" content="304840923">
+            <meta name="ajs-space-key" content="14set">
+            <meta name="ajs-space-name" content="2014年软件工程实训">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-user-display-name" content="刘建安">
+            <meta name="ajs-context-path" content="/wiki">
+            <meta name="ajs-version-number" content="4.2.3">
+            <meta name="ajs-build-number" content="3280">
+            <meta name="ajs-remote-user" content="12330208">
+            <meta name="ajs-static-resource-url-prefix" content="/wiki/s/en_GB/3280/1/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="200485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="126b224861e6095a620146faa63442df742a7e8e">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-quick.comment.resources" content="&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/wiki/s/en_GB/3280/1/1f783fedef85fb32b2e08c054318f8ad/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/wiki/s/en_GB/3280/1/1f783fedef85fb32b2e08c054318f8ad/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/wiki/s/en_GB/3280/1/1f783fedef85fb32b2e08c054318f8ad/_/download/contextbatch/js/editor,macro-browser,-viewcontent/batch.js&quot; &gt;&lt;/script&gt;
+">
+    
+    <link rel="shortcut icon" href="http://my.ss.sysu.edu.cn/wiki/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="http://my.ss.sysu.edu.cn/wiki/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://my.ss.sysu.edu.cn/wiki/opensearch/osd.action" title="SoYa Wiki">
+
+        <!-- include system javascript resources -->
+                        
+    
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="/wiki/s/en_GB/3280/1/811/_/download/superbatch/js/batch.js?conditionalComment=lt+IE+9" ></script>
+<![endif]-->
+<script type="text/javascript" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/wiki/s/en_GB/3280/1/811/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(5).js"></script>
+<script type="text/javascript" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(6).js"></script>
+<script type="text/javascript" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(7).js"></script>
+<script type="text/javascript" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(8).js"></script>
+<script type="text/javascript" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/com.atlassian.confluence.plugins.pagetree-pagetree-resources.js"></script>
+
+    
+    <!-- end system javascript resources -->
+
+    
+
+    
+    <link rel="canonical" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki.htm">
+    <link rel="shortlink" href="http://my.ss.sysu.edu.cn/wiki/x/K4ErEg">
+    <meta name="wikilink" content="[14set:GridWorld阶段2：基本任务]">
+    <meta name="page-version" content="64">
+	<meta name="ajs-canonical-url" content="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003">
+
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/1f783fedef85fb32b2e08c054318f8ad/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]--><link type="text/css" rel="stylesheet" href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/batch(9).css" media="all">
+            <meta name="ajs-content-type" content="comment">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/wiki/s/en_GB/3280/1/4.2.3/_">
+            <meta name="ajs-num-attachments" content="">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-content-id" content="304841003">
+            <meta name="ajs-save-drafts" content="false">
+            <meta name="ajs-action-locale" content="en_GB">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-new-page" content="">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-attachment-source-content-id" content="304841003">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-draft-type" content="">
+            <meta name="ajs-can-attach-files" content="true">
+                
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autocomplete" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autoformat" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    </head>
+
+<body onload="placeFocus()" id="com-atlassian-confluence" class="theme-documentation  splitter-invoked">
+
+        
+    <div id="full-height-container">
+    <div id="header-precursor">
+        
+                </div>
+
+<div id="header" class="sectionbottom ">
+        <form id="quick-search" class="quick-search" method="get" action="http://my.ss.sysu.edu.cn/wiki/dosearchsite.action">
+                <fieldset>
+            <input type="hidden" name="spaceSearch" value="false">
+        </fieldset>
+        <fieldset>
+            <legend>Quick Search</legend>
+            <input class="quick-search-query" id="quick-search-query" type="search" accesskey="search-pages-action.accesskey" autocomplete="off" name="queryString" size="25" results="10" placeholder="Search Confluence" title=" ( Type &#39;/&#39; )">
+            <input class="quick-search-submit" id="quick-search-submit" type="submit" value="Search Confluence">
+            <div class="aui-dd-parent quick-nav-drop-down"><!-- Quick nav appears here --></div>
+        </fieldset>
+        <fieldset class="hidden parameters">
+            <input type="hidden" id="quickNavEnabled" value="true">
+                    </fieldset>
+    </form>
+
+    <ul id="header-menu-bar" class="ajs-menu-bar">
+                    
+        
+            <li class="normal ajs-menu-item">
+        <a id="browse-menu-link" class="browse trigger ajs-menu-title" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#"><span><span>Browse</span></span></a>         <div class="ajs-drop-down assistive" hidden="">
+                        <ul id="browse-menu-link-leading" class="section-leading first">
+                                        <li>
+    
+        
+    
+    <a id="space-pages-link" href="http://my.ss.sysu.edu.cn/wiki/pages/listpages.action?key=14set" class="" title="Browse pages in the 2014年软件工程实训 space ( Type &#39;g&#39; then &#39;s&#39; )">
+                   <span>Pages</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-blogposts-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewrecentblogposts.action?key=14set" class="" title="Browse blogs in the 2014年软件工程实训 space">
+                   <span>Blog</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-labels-link" href="http://my.ss.sysu.edu.cn/wiki/labels/listlabels-heatmap.action?key=14set" class="" title="Browse labels in the 2014年软件工程实训 space">
+                   <span>Labels</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-attachments-link" href="http://my.ss.sysu.edu.cn/wiki/spaces/listattachmentsforspace.action?key=14set" class="" title="Browse attachments in the 2014年软件工程实训 space">
+                   <span>Attachments</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-mail-link" href="http://my.ss.sysu.edu.cn/wiki/mail/archive/viewmailarchive.action?key=14set" class="" title="Browse mail in the 2014年软件工程实训 space">
+                   <span>Mail</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-advanced-link" href="http://my.ss.sysu.edu.cn/wiki/spaces/viewspacesummary.action?key=14set" class="" title="Browse additional space functions in the 2014年软件工程实训 space">
+                   <span>Advanced</span></a>        </li>
+                            </ul>
+                        <ul id="browse-menu-link-global" class="section-global">
+                                        <li>
+    
+        
+    
+    <a id="whats-new-menu-link" href="http://docs.atlassian.com/confluence/docs-42/whatsnew/iframe" class="" title="">
+                   <span>What’s New</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="people-directory-link" href="http://my.ss.sysu.edu.cn/wiki/peopledirectory.action" class="" title="Browse the Confluence people directory">
+                   <span>People Directory</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-directory-link" href="http://my.ss.sysu.edu.cn/wiki/spacedirectory/view.action" class="" title="Browse the Confluence space directory">
+                   <span>Space Directory</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="feed-builder-link" href="http://my.ss.sysu.edu.cn/wiki/dashboard/configurerssfeed.action" class="" title="Create your custom RSS feed.">
+                   <span>Feed Builder</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="keyboard-shortcuts-link" href="http://my.ss.sysu.edu.cn/wiki" class="" title="View available keyboard shortcuts ( Type &#39;?&#39; )">
+                   <span>Keyboard Shortcuts</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="gadget-directory-link" href="http://my.ss.sysu.edu.cn/wiki" class="user-item administration-link" title="Browse gadgets provided by Confluence">
+                   <span>Confluence Gadgets</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+        
+                                                                
+            <li class="normal ajs-menu-item">
+        <a id="user-menu-link" class="user trigger ajs-menu-title" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#"><span><span>刘建安</span></span></a>         <div class="ajs-drop-down assistive" hidden="">
+                        <ul id="user-menu-link-user-preferences" class="section-user-preferences first">
+                                        <li>
+        
+        
+    
+    <a id="create-personal-space-link" href="http://my.ss.sysu.edu.cn/wiki/spaces/createpersonalspace.action" class="user-item personal-space" title="">
+                   <span>Add Personal Space…</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="view-user-history-link" href="http://my.ss.sysu.edu.cn/wiki/users/viewuserhistory.action" class="user-item user-history popup-link" title="">
+                   <span>Recently Viewed</span></a>        </li>
+                            </ul>
+                        <ul id="user-menu-link-user-content" class="section-user-content">
+                                        <li>
+    
+        
+    
+    <a id="view-user-profile-link" href="http://my.ss.sysu.edu.cn/wiki/users/viewmyprofile.action" class="user-item user-profile" title="">
+                   <span>Profile</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a href="http://my.ss.sysu.edu.cn/wiki/users/viewfollow.action?username=12330208" class="follow-link" title="">
+                   <span>Network</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="user-favourites-link" href="http://my.ss.sysu.edu.cn/wiki/users/viewmyfavourites.action" class="user-item" title="">
+                   <span>Favourites</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="user-watches-link" href="http://my.ss.sysu.edu.cn/wiki/users/viewnotifications.action" class="user-item" title="">
+                   <span>Watches</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="user-drafts-link" href="http://my.ss.sysu.edu.cn/wiki/users/viewmydrafts.action" class="user-item" title="">
+                   <span>Drafts</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="user-settings-link" href="http://my.ss.sysu.edu.cn/wiki/users/viewmysettings.action" class="user-item" title="">
+                   <span>Settings</span></a>        </li>
+                            </ul>
+                        <ul id="user-menu-link-user-operations" class="section-user-operations">
+                                        <li>
+    
+        
+    
+    <a id="logout-link" href="http://my.ss.sysu.edu.cn/wiki/logout.action" class="user-item logout-link" title="">
+                   <span>Log Out</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+                        <li class="normal ajs-menu-item">
+            <div id="splitter-button" class="" title="Show or hide sidebar ( Type &#39;[&#39; )"></div>
+        </li>
+
+    </ul>
+    
+    
+    <ol id="breadcrumbs">
+                    
+                        
+        <li class="first">
+                                    <span><a href="http://my.ss.sysu.edu.cn/wiki/dashboard.action" title="Go to Dashboard ( Type &#39;g&#39; then &#39;d&#39; )">Dashboard</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="http://my.ss.sysu.edu.cn/wiki/display/14set">2014年软件工程实训</a></span>
+                </li>
+                                        <li id="ellipsis" title="Show all breadcrumbs"><span><strong>…</strong></span></li>
+                                    
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://my.ss.sysu.edu.cn/wiki/display/14set/Home">Home</a></span>
+                </li>
+                                
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841014">案例库</a></span>
+                </li>
+                                
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://my.ss.sysu.edu.cn/wiki/display/14set/GridWorld">GridWorld</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki.htm">GridWorld阶段2：基本任务</a></span>
+                </li>
+        </ol>
+
+</div>
+
+    <div id="splitter" style="position: relative; height: 522.34375px;">
+    <div id="splitter-sidebar" style="position: absolute; left: 0px; width: 300px; height: 522px;">
+        
+
+                    
+        
+    
+
+<div class="plugin_pagetree">
+
+                <div id="pagetreesearch">
+            <form method="POST" action="http://my.ss.sysu.edu.cn/wiki/plugins/pagetreesearch/pagetreesearch.action" name="pagetreesearchform">
+                                    <input type="hidden" name="ancestorId" value="304841009">
+                                <input type="hidden" name="spaceKey" value="14set">
+                <input type="text" size="20" name="queryString">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    
+        
+    <ul class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+        <div class="plugin_pagetree_children" id="children304841009-0">
+<ul class="plugin_pagetree_children_list" id="child_ul304841009-0">
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840816-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840816">2014软件工程实训（综合）集体学习知识贡献分</a>
+        </span>            </div>
+
+        <div id="children304840816-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840878-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840878-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840878">文件库</a>
+        </span>            </div>
+
+        <div id="children304840878-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304841014-0" class="plugin_pagetree_childtoggle icon icon-minus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304841014-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841014">案例库</a>
+        </span>            </div>
+
+        <div id="children304841014-0" class="plugin_pagetree_children_container">
+                                                        <ul class="plugin_pagetree_children_list" id="child_ul304841014-0">
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840788-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840788">实训启动</a>
+        </span>            </div>
+
+        <div id="children304840788-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840852-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840852-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840852">会议议程管理Agenda</a>
+        </span>            </div>
+
+        <div id="children304840852-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840923-0" class="plugin_pagetree_childtoggle icon icon-minus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840923-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/display/14set/GridWorld">GridWorld</a>
+        </span>            </div>
+
+        <div id="children304840923-0" class="plugin_pagetree_children_container">
+                                                        <ul class="plugin_pagetree_children_list" id="child_ul304840923-0">
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840998-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840998-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840998">GridWorld阶段1：项目启动</a>
+        </span>            </div>
+
+        <div id="children304840998-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304841003-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304841003-0" style="font-weight: bold;">                        <a href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki.htm">GridWorld阶段2：基本任务</a>
+        </span>            </div>
+
+        <div id="children304841003-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304841002-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304841002-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841002">GridWorld阶段3：扩展任务</a>
+        </span>            </div>
+
+        <div id="children304841002-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840746-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840746">2014中级实训答辩</a>
+        </span>            </div>
+
+        <div id="children304840746-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                        </ul>
+                                        </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840825-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840825-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840825">嵌入式应用（飞行机器人）开发</a>
+        </span>            </div>
+
+        <div id="children304840825-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840871-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840871-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840871">基于Cocos2d-x的跨平台游戏开发</a>
+        </span>            </div>
+
+        <div id="children304840871-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus308707341-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan308707341-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=308707341">基于J2EE的企业级应用软件开发实践</a>
+        </span>            </div>
+
+        <div id="children308707341-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus308707348-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan308707348-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=308707348">社区居民求助系统</a>
+        </span>            </div>
+
+        <div id="children308707348-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus308707350-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan308707350-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=308707350">广东省道路运输企业诚信评价系统设计开发</a>
+        </span>            </div>
+
+        <div id="children308707350-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan308707353-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=308707353">移动互联网与新媒体创新创业案例</a>
+        </span>            </div>
+
+        <div id="children308707353-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus308707356-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan308707356-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=308707356">证券交易环境下完全端口技术架构与性能分析</a>
+        </span>            </div>
+
+        <div id="children308707356-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan308707359-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=308707359">实训总结</a>
+        </span>            </div>
+
+        <div id="children308707359-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                        </ul>
+                                        </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840783-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840783-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840783">案例阶段成绩</a>
+        </span>            </div>
+
+        <div id="children304840783-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus304840790-0" class="plugin_pagetree_childtoggle icon icon-plus" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840790-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840790">模板库</a>
+        </span>            </div>
+
+        <div id="children304840790-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840752-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840752">实训案例结项</a>
+        </span>            </div>
+
+        <div id="children304840752-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan304840828-0">                        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840828">空间页面评论统计</a>
+        </span>            </div>
+
+        <div id="children304840828-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+    </ul>
+</div>
+    </ul>
+
+    <fieldset class="hidden">
+        <input type="hidden" name="treeId" value="">
+        <input type="hidden" name="treeRequestId" value="/wiki/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false">
+        <input type="hidden" name="treePageId" value="304841003">
+
+        <input type="hidden" name="noRoot" value="false">
+        <input type="hidden" name="rootPageId" value="304841009">
+
+        <input type="hidden" name="rootPage" value="">
+        <input type="hidden" name="startDepth" value="0">
+        <input type="hidden" name="spaceKey" value="14set">
+
+        <input type="hidden" name="i18n-pagetree.loading" value="Loading...">
+        <input type="hidden" name="i18n-pagetree.error.permission" value="Unable to load page tree. It seems that you do not have permission to view the root page.">
+        <input type="hidden" name="i18n-pagetree.eeror.general" value="There was a problem retrieving the page tree. Please check the server log file for more information.">
+        <input type="hidden" name="loginUrl" value="/wiki/login.action?os_destination=%2Fpages%2Fviewpage.action%3FpageId%3D304841003">
+
+                <fieldset class="hidden">
+                                                <input type="hidden" name="ancestorId" value="304840923">
+                                    <input type="hidden" name="ancestorId" value="304841014">
+                                    <input type="hidden" name="ancestorId" value="304841009">
+                                    </fieldset>
+    </fieldset>
+</div>
+
+
+
+            </div><div class="vsplitbar" unselectable="on" style="z-index: 4; position: absolute; -webkit-user-select: none; cursor: ew-resize; left: 300px; height: 522px;"><a href="javascript:void(0)" accesskey="L" tabindex="0" title="vsplitbar"></a></div>
+    <div id="splitter-content" style="position: absolute; left: 305px; width: 1061px; height: 522px;">
+
+                    <script type="text/javascript" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/doc-theme.js"></script>
+    
+                        
+            
+<div id="main">
+    <div id="main-header">
+        
+        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                <li class="ajs-button normal">
+    
+        
+    
+    <a id="shareContentLink" href="http://my.ss.sysu.edu.cn/wiki" class="share" title="Share this content by emailing other users ( Type &#39;s&#39; )">
+                   <span><u>S</u>hare</span></a>        </li>
+                    
+            <li class="normal ajs-menu-item">
+        <a id="add-menu-link" class="add trigger ajs-menu-title" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#"><span><span>Add</span></span></a>         <div class="ajs-drop-down assistive" hidden="">
+                        <ul id="add-menu-link-page" class="section-page first">
+                                        <li>
+    
+        
+    
+    <a id="add-comment-menu-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003&showComments=true&showCommentArea=true#addcomment" class="add-comment" title="Add a Comment ( Type &#39;m&#39; )">
+                   <span>Comment</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="add-attachment-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpageattachments.action?pageId=304841003" class="add-attachment" accesskey="a" title="">
+                   <span>Attachment</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+                    
+            <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action trigger ajs-menu-title" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#"><span><span>Tools</span></span></a>         <div class="ajs-drop-down most-right-menu-item assistive" hidden="">
+                        <ul id="action-menu-link-primary" class="section-primary first">
+                                        <li>
+    
+        
+    
+    <a id="view-attachments-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpageattachments.action?pageId=304841003" class="action-view-attachments" accesskey="a" title="View Attachments ( Type &#39;t&#39; )">
+                   <span><u>A</u>ttachments (5)</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="batchupload.webitem.link0" href="http://my.ss.sysu.edu.cn/wiki/pages/batchupload.action?pageId=304841003" class="" accesskey="b" title="">
+                   <span>Zip Upload</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="action-view-history-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpreviousversions.action?pageId=304841003" class="action-view-history" title="">
+                   <span>Page History</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="action-page-permissions-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewinfo.action?pageId=304841003" class="action-page-permissions" title="Edit restrictions">
+                   <span>Restrictions</span></a>        </li>
+                            </ul>
+                        <ul id="action-menu-link-marker" class="section-marker">
+                                        <li>
+    
+        
+    
+    <a id="page-favourite" href="http://my.ss.sysu.edu.cn/wiki/labels/addfavourite.action?entityId=304841003&atl_token=126b224861e6095a620146faa63442df742a7e8e" class="action-page-favourite" title="">
+                   <span>Favourite</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="page-watch" href="http://my.ss.sysu.edu.cn/wiki/pages/addpagenotification.action?pageId=304841003&atl_token=126b224861e6095a620146faa63442df742a7e8e" class="action-page-watching" title="">
+                   <span>Watch</span></a>        </li>
+                                        <li class="assistive">
+    
+        
+    
+    <a id="page-unwatch" href="http://my.ss.sysu.edu.cn/wiki/pages/removepagenotification.action?pageId=304841003&atl_token=126b224861e6095a620146faa63442df742a7e8e" class="action-page-watching selected ie-page-watching-selected inactive" title="">
+                   <span>Stop Watching</span></a>        </li>
+                            </ul>
+                        <ul id="action-menu-link-secondary" class="section-secondary">
+                                        <li>
+    
+        
+    
+    <a id="view-page-info-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewinfo.action?pageId=304841003" class="action-view-info" title="">
+                   <span>Info</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="link-to-page-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewinfo.action?pageId=304841003" class="" title="Link to this Page ( Type &#39;k&#39; )">
+                   <span>Link to this Page…</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="view-in-hierarchy-link" href="http://my.ss.sysu.edu.cn/wiki/pages/listpages-dirview.action?key=14set&openId=304841003#selectedPageInHierarchy" class="" title="">
+                   <span>View in Hierarchy</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="action-view-source-link" href="http://my.ss.sysu.edu.cn/wiki/plugins/viewsource/viewpagesrc.action?pageId=304841003" class="action-view-source popup-link" title="">
+                   <span>View Source</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+        
+        <h1 id="title-heading" class="pagetitle">
+                            <a href="http://my.ss.sysu.edu.cn/wiki/display/14set"><img class="logo global custom" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/global.logo" alt=""></a>                
+            <span id="title-text">
+                                        <a href="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki.htm">GridWorld阶段2：基本任务</a>
+                            </span>
+        </h1>
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+
+<div id="content" class="page view">
+    
+<div id="action-messages">
+    </div>
+
+
+
+    
+<script type="text/x-template" title="movePageDialog">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Specify the new parent page for this page and its children by space and title.
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <fieldset>
+                
+
+    <legend class="assistive"><span>Change the Parent Page to a Known Page</span></legend>
+            <div class="row">
+                <label for="new-space">New space:</label>
+                <div class="value new-space-value">
+                    <input id="new-space-key" name="new-space-key" type="hidden" value="14set">
+                                            <span class="space-input">
+                            <input id="new-space" name="new-space" value="2014年软件工程实训" disabled="disabled">
+                        </span>
+                        <span class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</span>
+                                        <div class="new-space-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+            <div class="row">
+                <label for="new-parent-page">New parent page:</label>
+                <div class="value new-parent-page-value">
+                    <span class="page-input">
+                        <input id="new-parent-page" name="new-parent-page" value="GridWorld">
+                    </span>
+                    <span class="description">Start typing a page title to see a list of suggestions.</span>
+                    <div class="new-parent-page-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="location-info">
+        <div class="row">
+            <label>Current location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="current-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label>New location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="new-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" title="movePageSearchPanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Search for and select the new parent page for this page and its children.
+            </div>
+        </div>
+    </div>
+    <div id="move-page-search-container" class="row">
+        <div class="search-form">
+            <fieldset>
+                    
+
+    <legend class="assistive"><span>Search for a New Parent Page</span></legend>
+                    
+
+    <label  for="move-page-search-query" class="assistive">Search keywords</label>
+                <input class="search-query" id="move-page-search-query">
+                    
+
+    <label  for="move-page-search-space" class="assistive">Search in space</label>
+                                    <select id="move-page-search-space" class="search-space" disabled="disabled">
+                        <option value="14set" selected="selected">2014年软件工程实训</option>
+                    </select>
+                                <input type="button" value="Search">
+                                    <div class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</div>
+                            </fieldset>
+        </div>
+        <div class="search-results">
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="searchResultsGrid">
+    <table>
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <th class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></th>
+        <td class="search-result-space"><a class="space" href="/wiki/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script><!-- Start restrictions section -->
+<script type="text/x-template" title="page-permissions-div">
+<div id="page-permissions-div">
+    <div id="page-permissions-editor-form">
+
+                <div id="page-permissions-error-div" class="hidden">
+            <a href="#" id="permissions-error-div-close">Ok</a>
+            <div></div>
+        </div>
+
+                <div id="page-permissions-type-radios" class="page-permissions-label-rows">
+            <div>
+                <input id="restrictViewRadio" type="radio" checked="checked" name="pagePermissionTypeRadio" value="view"/>
+                <label for="restrictViewRadio">Restrict viewing of this page</label>
+                <input id="restrictEditRadio" type="radio" name="pagePermissionTypeRadio" value="edit"/>
+                <label for="restrictEditRadio">Restrict editing of this page</label>
+            </div>
+        </div>
+        <div id="page-permissions-input" class="page-permissions-label-rows">
+            <div class="page-permissions-label">To:</div>
+            <div id="page-permissions-chooser-box">
+                                    <span id="page-permissions-choose-me" class="ajs-button normal">
+                        <img class="permission-entity-picture" src="/wiki/download/attachments/168329448/12330208-91233-pp-%E5%BB%BA%E5%AE%89.jpg?version=1&amp;modificationDate=1371952275000" border="0" alt="Me" align="absmiddle"/>
+                        <a href="#">Me</a>
+                        <span class="remote-user-name hidden">12330208</span>
+                    </span>
+                                <span id="page-permissions-choose-user" class="ajs-button">
+                    
+
+
+
+    
+
+
+
+<a href="#" id='userpicker-popup-link-image' onClick="var picker = window.open('/wiki/spaces/openuserpicker.action?key=14set&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;"><img src="/wiki/s/en_GB/3280/1/_/images/icons/user_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose users" /></a>
+<a href="#" id='userpicker-popup-link-text' onClick="var picker = window.open('/wiki/spaces/openuserpicker.action?key=14set&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;">Person...</a>
+
+
+                </span>
+                <span id="page-permissions-choose-group" class="ajs-button">
+                    
+
+
+
+    
+
+ 
+
+<a href="#" id='grouppicker-popup-link-image' onClick="var picker = window.open('/wiki/spaces/opengrouppicker.action?key=14set&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;"><img src="/wiki/s/en_GB/3280/1/_/images/icons/group_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose groups" /></a>
+<a href="#" id='grouppicker-popup-link-text' onClick="var picker = window.open('/wiki/spaces/opengrouppicker.action?key=14set&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;">Group...</a>
+
+
+                </span>
+            </div>
+            <div id="page-permissions-input-box">
+                <input type="text" id="page-permissions-names-input" name="permissionNames"
+                    placeholder="Enter user or group name" class="autocomplete-user"
+                    data-max="10" data-none-message="No matches"
+                    data-target="#page-permissions-names-hidden" data-template="{username}"
+                    data-dropdown-target="#page-perms-name-dropdown-wrapper" data-resize-to-input="true"
+                    size="30"/>
+                <input
+    type="hidden"
+                            id="page-permissions-names-hidden"           />                <img height="16px" width="1px" src="/wiki/s/en_GB/3280/1/_/images/border/spacer.gif"/>
+                <input type="button" id="add-typed-names" value="Restrict">
+                <div id="page-perms-name-dropdown-wrapper" class="aui-dd-parent autocomplete"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page-permissions-tables">
+        <div id="page-permissions-table-div">
+                        <table id="page-permissions-table" class="page-permissions-table">
+                <tr id="page-permissions-no-views" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No view restrictions are defined for this page</span></td>
+                </tr>
+                <tr id="page-permissions-no-edits" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No edit restrictions are defined for this page</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="page-inherited-permissions-table-div" class="hidden">
+            <span id="page-inherited-permissions-table-desc">
+                <a class="icon twisty-closed">Show/Hide</a>
+                <a id="toggle-inherited-permissions" title="Click to see inherited restrictions">This page has restricted parent pages. It can only be seen by users who can see those parent pages.</a>
+            </span>
+            <div id="page-inherited-permissions-tables" class="hidden page-inheritance-togglable"></div>
+        </div>
+    </div>
+</div>
+</script>
+
+<!-- End restrictions section -->
+
+        
+    
+    
+        <fieldset class="hidden parameters">
+            <input type="hidden" title="parentPageId" value="304840923">
+        </fieldset>
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+                            <li class="page-metadata-item noprint">
+    
+            
+    
+    <a id="content-metadata-page-restrictions" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" class="page-metadata-icon page-restrictions hidden" title="Page restrictions apply. Click the lock icon to view or edit the restriction.">
+                   <span>Page restrictions apply</span></a>        </li>
+                            <li class="page-metadata-item noprint">
+    
+        
+    
+    <a id="content-metadata-attachments" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpageattachments.action?pageId=304841003&metadataLink=true" class="page-metadata-icon action-view-attachments" accesskey="a" title="Attachments: 5">
+                   <span><span class="page-metadata-attachments-text">Attachments:</span><span class="page-metadata-attachments-count">5</span></span></a>        </li>
+                        <li class="page-metadata-modification-info">
+                                    Added by <a href="http://my.ss.sysu.edu.cn/wiki/display/~wangyuanrui" class="url fn confluence-userlink userlink-0" data-username="wangyuanrui" title="" data-user-hover-bound="true">王远瑞</a>, last edited by <a href="http://my.ss.sysu.edu.cn/wiki/display/~10389179" class="url fn confluence-userlink userlink-1" data-username="10389179" title="" data-user-hover-bound="true">魏新亮</a> on Jul 03, 2014
+                                                                <span class="noprint">&nbsp;(<a id="view-change-link" href="http://my.ss.sysu.edu.cn/wiki/pages/diffpages.action?pageId=304841003&originalId=322437228">view change</a>)</span>
+                                                </li>
+                    </ul>
+                </div>
+
+
+<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+        
+        <fieldset class="hidden parameters">
+                        <input type="hidden" title="browsePageTreeMode" value="view">
+        </fieldset>
+
+        <div class="wiki-content">
+                           <h3 id="GridWorld阶段2：基本任务-摘要">摘要</h3><p>&nbsp;&nbsp;&nbsp; 本阶段在老师和TA指导下开始进行Gridworld项目，小组成员将协同分工，完成指定的任务。本阶段既有<span style="color: rgb(255,0,0);"><strong>个人任务</strong></span><strong>也有</strong><span style="color: rgb(255,0,0);"><strong>团队任务</strong></span>。阶段时间为<span style="color: rgb(255,0,0);">4</span>天。</p><h3 id="GridWorld阶段2：基本任务-制品">制品</h3><ol><li>个人任务：<span style="color: rgb(0,0,255);">Part2、Part3、</span><span style="color: rgb(0,0,255);">Part 4 和 Part 5的所有问题与练习、程序代码</span><span style="color: rgb(0,0,255);"><span style="color: rgb(0,0,255);"><span style="color: rgb(0,51,102);">&nbsp;</span></span></span></li><li>团队任务：<span style="color: rgb(0,0,255);">Group Activity</span><span style="color: rgb(0,0,255);"><span style="color: rgb(0,0,255);"><span style="color: rgb(0,0,255);">程序代码</span></span>、程序说明和测试报告</span></li></ol><h3 id="GridWorld阶段2：基本任务-制品提交方式">制品提交方式</h3><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>提交方式</p></th><th class="confluenceTh"><p>制品名称</p></th></tr><tr><td class="confluenceTd"><p><span style="color: rgb(0,0,255);">FTP</span></p></td><td class="confluenceTd"><ol><li>Part2的问题和练习（命名方式：<span style="color: rgb(0,0,255);">学号_中文名字拼音_<span style="color: rgb(0,0,255);">Part2</span>.pdf</span> （或.doc））</li><li>Part3的问题和练习（命名方式：<span style="color: rgb(0,0,255);">学号_中文名字拼音_<span style="color: rgb(0,0,255);">Part3</span>.pdf</span> （或.doc））</li><li>Part 4<span>的问题和练习<span>（命名方式：</span><span style="color: rgb(0,0,255);">学号_中文名字拼音_<span style="color: rgb(0,0,255);">Part4</span>.pdf（或.doc））</span></span></li><li>Part 5的所有问题与练习。（命名方式：<span style="color: rgb(0,0,255);">学号_中文名字拼音_<span style="color: rgb(0,0,255);">Part5</span>.pdf（或.doc））</span></li><li>Jumper（Group Activity）程序说明和测试报告。（命名方式，程序说明：<span style="color: rgb(0,0,255);">GA_组号_PD.pdf</span>（或.doc），测试报告：<span style="color: rgb(0,0,255);">GA_组号_TR.pdf</span>（或.doc）</li><li>Jumper（Group Activity）程序代码（命名方式，<span style="color: rgb(0,0,255);">GA_<span style="color: rgb(0,0,255);">组号</span>_CD</span>.zip）</li></ol></td></tr><tr><td colspan="1" class="confluenceTd"><span style="color: rgb(51,102,255);">HTTP</span></td><td colspan="1" class="confluenceTd">各部分编写的Java代码（提交要求请参考网页）</td></tr></tbody></table></div><h3 id="GridWorld阶段2：基本任务-步骤">步骤</h3><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>第一天</p></th><th class="confluenceTh">第二天</th><th class="confluenceTh"><p>第三天</p></th><th class="confluenceTh"><p>第四天</p></th></tr><tr><td class="confluenceTd"><p>学生：&nbsp; <br class="atl-forced-newline">&nbsp;1.开始<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936028" rel="nofollow">【开发】Part2</a>，完成问题和练习（英文作答），以及CircleBug、SpiralBug、ZBug、 DancingBug的代码编写。 晚上5:30前将问题和练习的答案提交到FTP上。</p><p>2.将编写的代码用Sonar进行分析，并对照分析结果对代码进行修改。</p><p>3.晚上12点之前提交Part2编写的Java代码到指定网页。</p><p>&nbsp;</p><p>Hint:</p><p>使用Ant运行GridWorld程序时需要添加属性fork="yes"。</p><p><br class="atl-forced-newline"><br></p><p>&nbsp;</p><p>&nbsp;</p></td><td class="confluenceTd"><p>学生：</p><p><span>1.开始</span><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936030" rel="nofollow">【开发】Part3</a><span>，完成所有问题和练习（英文作答），以及Jumper（Group Activity）的代码编写和测试。</span><u>晚上5:30</u><span>前将所有问题和练习的答案提交到FTP上，</span><u>晚上</u><u>12:00</u><span>前将Jumper（GroupActivity）程序说明、程序代码（</span><u>使用</u><u>ANT构建，使用Junit测试</u><span>）、测试报告提交到FTP上。(参考：<a href="http://my.ss.sysu.edu.cn/wiki/download/attachments/304841003/%E7%A8%8B%E5%BA%8F%E8%AF%B4%E6%98%8E_%E6%A8%A1%E6%9D%BF.doc?version=1&modificationDate=1403250116000">程序说明模板</a></span><span>和<a href="http://my.ss.sysu.edu.cn/wiki/download/attachments/304841003/%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A_%E6%A8%A1%E6%9D%BF.doc?version=1&modificationDate=1403250129000">测试报告模板</a></span><span>）</span></p><p><span><span>2.将编写的代码用Sonar进行分析，并对照分析结果对代码进行修改。</span></span></p><p><span><span>3.晚上12点前提交Part3编写的Java代码到指定网页。</span></span></p><p><span>注意：<span>Group Activity中的问题回答不用提交。 </span></span></p><p>TA：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp; &nbsp; 1.对<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936009" rel="nofollow">Part1</a>的问题和练习进行审核，给分标准请参照<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936144" rel="nofollow">GridWorld阶段1评审表</a><br>&nbsp;&nbsp;&nbsp; 2.下午4:00检查CircleBug、SpiralBug、ZBug、DancingBug是否运行正确。</p><p>3.查看Sonar的分析结果，不合格的扣分，具体参照<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936007" rel="nofollow">评审表</a>。<br>&nbsp;&nbsp;&nbsp; 4.下午4:00检查Jumper是否运行正确。</p></td><td class="confluenceTd"><p>学生：&nbsp;&nbsp; <br class="atl-forced-newline">&nbsp;&nbsp;1.完成<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936042" rel="nofollow">【开发】Part4</a>所有问题和练习（英文作答），以及Modified ChameleonCritter、ChameleonKid、RockHound、BlusterCritter、QuickCrab、kingCrab的代码编写，晚上12:00前将问题和练习的答案提交到FTP上。 <br>&nbsp;&nbsp;&nbsp;&nbsp; 2.完成Group Activity的设计、编码、测试。(<u>不需要提交任何制品，TA会现场检查大家Group Activity完成的情况</u>）&nbsp;</p><p>&nbsp;&nbsp; 3.下午2:00组织各自的小组对Jumper（GroupActivity）进行交叉评审。交叉评审的标准请参考<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936010" rel="nofollow">GridWorld交叉评审标准</a>。</p><p>4.<span>将编写的代码用Sonar进行分析，并对照分析结果对代码进行修改。</span></p><p><span>5.晚上12点前提交Part4编写的代码到指定网页。</span></p><p>&nbsp;<br>TA：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp; 1.对<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936028" rel="nofollow">Part2</a>和<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936030" rel="nofollow">Part3</a>的问题和练习进行审核和批改。评分标准请参照：<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936007" rel="nofollow">GridWorld阶段2评审表</a>。&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp; 2.下午2:00组织各自的小组对Jumper（GroupActivity）进行交叉评审。交叉评审的标准请参考<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936010" rel="nofollow">GridWorld交叉评审标准</a>。 <br>&nbsp;&nbsp;&nbsp;&nbsp; 3.下午3:30检查Modified ChameleonCritter、ChameleonKid、 RockHound、BlusterCritter、 QuickCrab、KingCrab是否运行正确。</p><p>4.<span>查看Sonar的分析结果，不合格的扣分，具体参照</span><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936007" rel="nofollow">评审表</a><span>&nbsp;</span><span>。</span></p></td><td class="confluenceTd"><p>学生： &nbsp;&nbsp;&nbsp; <br class="atl-forced-newline">&nbsp;&nbsp;&nbsp; 1.完成<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840870">【开发】Part 5</a>所有问题练习（英文作答）和程序，于下午5:30前将问题和练习提交到FTP上。</p><p><span> 2.将编写的代码用Sonar进行分析，并对照分析结果对代码进行修改。</span></p><p><span>3.晚上12点之前提交Part5编写的代码到指定网页。</span></p><p>TA： <br class="atl-forced-newline">&nbsp;&nbsp;&nbsp; 1.对<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840857">Part4</a>的问题和练习进行审核和批改。 <br class="atl-forced-newline">&nbsp;&nbsp;&nbsp;&nbsp;2.下午14:00开始检查Par4 Group Activity程序和Part5的程序。</p><p>3.<span>查看Sonar的分析结果，不合格的扣分，具体参照</span><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=167936007" rel="nofollow">评审表</a><span>&nbsp;</span><span>。</span></p></td></tr></tbody></table></div><h3 id="GridWorld阶段2：基本任务-阶段结束">阶段结束</h3><p>&nbsp;&nbsp;&nbsp; 完成上述各步骤后，组长报告TA，TA将检查小组各项制品，并根据"软件工程实训考核规定"中的条款和"<a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304840889">GridWorld阶段2评审表</a>"检查评估小组表现。获得及格的团队进入下一阶段，不及格的团队需要根据TA意见进行整改，得到TA认可后，进入下一阶段。整改通过后，阶段分数维持整改前分数不变。</p>
+    
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003"
+    dc:identifier="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003"
+    dc:title="GridWorld阶段2：基本任务"
+    trackback:ping="http://my.ss.sysu.edu.cn/wiki/rpc/trackback/304841003"/>
+</rdf:RDF>
+-->
+
+        <script type="text/x-template" title="labels-dialog-div">
+        <div id="labels-dialog">
+        <div class="labels-editor">
+            <form method="GET" action="" id="add-labels-form">
+                <div id="labelOperationErrorContainer">
+                    <span class="error"><span class="errorMessage" id="labelOperationErrorMessage"></span></span>
+                </div>
+    
+                <div id="label-input-fields">
+                    <input autocomplete="off" id="labelsString" name="labelsString" value="">
+                    <input id="add-labels-editor-button" type="submit" class="add-labels" value="Add">
+                </div>
+                <div id="labelsAutocompleteList" class="aui-dd-parent resize-to-input" style="width: 417px"></div>
+                <div id="dialog-label-list">
+                    <!-- DIV placeholder for labels list, is copied into in labels-dialog.js -->
+                </div>
+                <div id="waitImageAndStatus">
+                    <img class="waiting" alt="Please wait" src="/wiki/s/en_GB/3280/1/_/images/icons/wait.gif">&nbsp;
+                    <span id="labelOperationStatus" class="smalltext"></span>
+                </div>
+                <div class="labels-tip"></div>
+            </form>
+        </div>
+        <div style="display: none;">
+            <div class="labels-section-content content-column"
+    	    		entityid="304841003" entitytype="Page"
+    		>
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="#" class="show-labels-editor editor-icon" title="Edit Labels">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>        </div>
+    </div>
+</script>
+            
+    
+
+
+<div id="likes-and-labels-container"><div id="likes-section"><a href="" class="like-button">Like</a><span class="like-summary">Be the first to like this</span></div><div id="labels-section" class="pageSection group">
+    <div class="labels-editor">
+        <span id="labels-section-title" class="label-title">Labels</span>
+        <div class="labels-section-content content-column" entityid="304841003" entitytype="Page">
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" class="show-labels-editor editor-icon" title="Edit Labels ( Type &#39;l&#39; )">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>    </div>
+</div></div>
+
+                    <div id="children-section" class="pageSection children-hidden group">
+                
+        <div class="section-header summary">
+            <h2 id="children-section-title" class="section-title">
+                <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003&showChildren=true#children" class="children-show-hide">
+                                            6 Child Pages
+                                    </a>
+            </h2>
+
+            <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003&showChildren=true#children" class="children-show-hide icon"></a>
+            <!--
+            <span class="noprint grey">
+                <a class="children-subtitle" href="/wiki/pages/listpages-dirview.action?key=14set&amp;openId=304841003#selectedPageInHierarchy">Reorder Pages</a>
+                            </span>
+            -->
+        </div>
+        <div id="page-children" class="pageSectionBody">
+                    </div>
+        </div>
+    
+            
+
+
+
+
+            
+    
+
+
+
+
+
+
+
+
+<div id="comments-section" class="pageSection group">
+    
+    
+    
+            <div class="bottom-comment-panels comment-panels">
+                                    
+    
+
+                    
+    
+
+
+    
+
+<div class="quick-comment-container comment add"><p class="comment-user-logo"><a class="userLogoLink userlink-2" data-username="12330208" href="http://my.ss.sysu.edu.cn/wiki/display/~12330208" title="" data-user-hover-bound="true"><img class="userLogo logo" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/12330208-91233-pp-建安.jpg" alt="User icon: 12330208" title=""></a></p><div class="quick-comment-vertical-spacer"></div><div class="quick-comment-body"><div class="quick-comment-loading-container" style="display:none;"><p class="quick-comment-loading-message">Loading the Editor</p></div><form style="display:block;" class="quick-comment-form" method="post" name="inlinecommentform" action="http://my.ss.sysu.edu.cn/wiki/pages/doaddcomment.action?pageId=304841003"><div title="Add a Comment ( Type &#39;m&#39; )" class="quick-comment-prompt"><span>Write a comment…</span></div></form></div></div>
+
+            </div>
+    
+                        <div id="comments-actions" class="aui-toolbar noprint" style="display: none;">
+                <p class="toolbar-group">
+                    <span class="toolbar-item"><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003&showComments=true&showCommentArea=true#addcomment" id="add-comment-rte" accesskey="m" class="toolbar-trigger">Add Comment</a></span>
+                </p>
+            </div>
+            </div>
+
+
+            
+</div>
+
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+
+
+
+    <br class="clear">
+</div>
+  
+    </div>
+</div>
+
+
+        
+            <div id="footer">
+                                                <p class="license license-community">
+                  Powered by a free <b>Atlassian Confluence Community License</b> granted to School of Software, Sun Yat-sen University. <a href="http://www.atlassian.com/c/conf/11460">Evaluate Confluence today</a>.<br>
+                </p>
+                        
+    <ul id="poweredby">
+        <li class="noprint">Powered by <a href="http://www.atlassian.com/software/confluence" class="hover-footer-link">Atlassian Confluence</a> <span id="footer-build-information">4.2.3</span>, the <a href="http://www.atlassian.com/software/confluence/tour/enterprise-wiki.jsp" class="hover-footer-link">Enterprise Wiki</a></li>
+        <li class="print-only">Printed by Atlassian Confluence 4.2.3, the Enterprise Wiki.</li>        
+        <li class="noprint"> &nbsp;·&nbsp; <a href="http://jira.atlassian.com/secure/BrowseProject.jspa?id=10470" class="hover-footer-link">Report a bug</a></li>
+        <li class="noprint"> &nbsp;·&nbsp; <a href="http://www.atlassian.com/about/connected.jsp?s_kwcid=Confluence-stayintouch" class="hover-footer-link">Atlassian News</a></li>
+    </ul>
+
+            
+    </div>
+    </div>
+
+
+<div id="content-hover-0" class="ajs-content-hover"><div class="contents" style="width: 300px;"></div></div><div id="content-hover-1" class="ajs-content-hover"><div class="contents" style="width: 300px;"></div></div><div id="content-hover-2" class="ajs-content-hover"><div class="contents" style="width: 300px;"></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="content-hover-shadow" style="display: none;"><div class="tl"></div><div class="tr"></div><div class="l"></div><div class="r"></div><div class="bl"></div><div class="br"></div><div class="b"></div></div><div id="fileuploadShim" style="position: relative; z-index: 0;"></div><div id="p18th93esg1fmd1a5p1edc114o16as0_html5_container" class="plupload html5" style="position: absolute; width: 1349px; height: 0px; overflow: hidden; z-index: -1; opacity: 0; top: 580px; left: 0px; background: transparent;"><input id="p18th93esg1fmd1a5p1edc114o16as0_html5" style="font-size: 999px; position: absolute; width: 100%; height: 100%;" type="file" accept="" multiple="multiple"></div><div id="editor-preload-container" style="display: none;">
+                                                
+
+<script type="text/x-template" title="editor-css">
+    <link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/1.0/_/download/batch/confluence.web.resources:content-styles/confluence.web.resources:content-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/1.0/_/download/batch/confluence.web.resources:content-styles/confluence.web.resources:content-styles.css?media=print" media="print">
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/1.13/_/download/batch/com.atlassian.confluence.plugins.status-macro:editor_content_status/com.atlassian.confluence.plugins.status-macro:editor_content_status.css" media="all">
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/4.2.3/_/download/batch/com.atlassian.confluence.tinymceplugin:editor-content-styles/com.atlassian.confluence.tinymceplugin:editor-content-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/1/_/styles/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="/wiki/s/en_GB/3280/1/1.0/_/download/resources/com.atlassian.confluence.themes.default:styles/default-theme.css" media="all">
+
+</script>
+
+    
+
+
+
+
+
+
+
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+        <div id="toolbar">
+
+        <div id="rte-toolbar" class="aui-toolbar">
+
+            <div class="toolbar-split toolbar-split-left">
+                <ul class="toolbar-group">
+                                        <li id="format-dropdown" class="toolbar-item toolbar-dropdown">
+                        <div class="aui-dd-parent">
+                            <a id="format-dropdown-display" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" class="toolbar-trigger aui-dd-trigger" data-control-id="formatselect">
+                                <span class="dropdown-text">Paragraph</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+                            <ul class="aui-dropdown hidden">
+                                    <li class="dropdown-item format-p" data-format="p">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Paragraph (Ctrl+0)">Paragraph</a>
+    </li>
+                                    <li class="dropdown-item format-h1" data-format="h1">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Heading 1 (Ctrl+1)">Heading 1</a>
+    </li>
+                                    <li class="dropdown-item format-h2" data-format="h2">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Heading 2 (Ctrl+2)">Heading 2</a>
+    </li>
+                                    <li class="dropdown-item format-h3" data-format="h3">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Heading 3 (Ctrl+3)">Heading 3</a>
+    </li>
+                                    <li class="dropdown-item format-h4" data-format="h4">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Heading 4 (Ctrl+4)">Heading 4</a>
+    </li>
+                                    <li class="dropdown-item format-h5" data-format="h5">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Heading 5 (Ctrl+5)">Heading 5</a>
+    </li>
+                                    <li class="dropdown-item format-h6" data-format="h6">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Heading 6 (Ctrl+6)">Heading 6</a>
+    </li>
+                                    <li class="dropdown-item format-pre" data-format="pre">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Preformatted (Ctrl+7)">Preformatted</a>
+    </li>
+                                    <li class="dropdown-item format-blockquote" data-format="blockquote">
+        <a class="item-link" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Quote (Ctrl+8)">Quote</a>
+    </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="toolbar-group">
+                    
+                <li class="toolbar-item" id="rte-button-bold">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Bold (Ctrl+B)" data-control-id="bold">
+                <span class="icon icon-bold ">Bold</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item" id="rte-button-italic">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Italic (Ctrl+I)" data-control-id="italic">
+                <span class="icon icon-italic ">Italic</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item" id="rte-button-underline">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Underline (Ctrl+U)" data-control-id="underline">
+                <span class="icon icon-underline ">Underline</span>
+        </a>
+    </li>
+                    <li class="toolbar-item toolbar-splitbutton" id="color-picker-control">
+                        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" id="rte-button-color" title="Colour" data-color="003366">
+                            <span class="selected-color"></span>
+                        </a>
+                        <div class="aui-dd-parent">
+                            <a class="toolbar-trigger aui-dd-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" id="rte-button-color-selector" data-control-id="colorSelector" title="More colours">
+                                    <span class="icon icon-dropdown ">More colours</span>
+                            </a>
+                            <div class="color-picker-container">
+                                <div class="color-picker aui-dropdown hidden">
+                                    <ul>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #000000" data-color="000000">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #993300" data-color="993300">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #333300" data-color="333300">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #003300" data-color="003300">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #003366" data-color="003366">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #000080" data-color="000080">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #333399" data-color="333399">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #333333" data-color="333333">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #800000" data-color="800000">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FF6600" data-color="FF6600">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #808000" data-color="808000">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #008000" data-color="008000">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #008080" data-color="008080">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #0000FF" data-color="0000FF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #666699" data-color="666699">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #808080" data-color="808080">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FF0000" data-color="FF0000">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FF9900" data-color="FF9900">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #99CC00" data-color="99CC00">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #339966" data-color="339966">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #33CCCC" data-color="33CCCC">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #3366FF" data-color="3366FF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #800080" data-color="800080">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #999999" data-color="999999">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FF00FF" data-color="FF00FF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FFCC00" data-color="FFCC00">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FFFF00" data-color="FFFF00">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #00FF00" data-color="00FF00">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #00FFFF" data-color="00FFFF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #00CCFF" data-color="00CCFF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #993366" data-color="993366">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #C0C0C0" data-color="C0C0C0">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FF99CC" data-color="FF99CC">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FFCC99" data-color="FFCC99">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FFFF99" data-color="FFFF99">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #CCFFCC" data-color="CCFFCC">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #CCFFFF" data-color="CCFFFF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #99CCFF" data-color="99CCFF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #CC99FF" data-color="CC99FF">&nbsp;</a></li>
+            <li><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" style="background-color: #FFFFFF" data-color="FFFFFF">&nbsp;</a></li>
+    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="toolbar-item toolbar-dropdown" id="more-menu">
+                        <div class="aui-dd-parent">
+                            <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" class="toolbar-trigger aui-dd-trigger" id="rte-button-more" title="More">
+                                    <span class="icon icon-more "></span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+                            <div class="aui-dropdown grouped hidden">
+                                <div class="grouped-dropdown-item">
+                                    <ul>
+                                                            <li class="dropdown-item more-menu-trigger" data-control-id="strikethrough">
+        <a id="rte-strikethrough" class="item-link" title="Strikethrough (Ctrl+Shift+S)" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon icon-check hidden"></span>
+Strikethrough
+        </a>
+    </li>
+                                                        <li class="dropdown-item more-menu-trigger" data-control-id="sub">
+        <a id="rte-sub" class="item-link" title="Subscript" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon icon-check hidden"></span>
+Subscript
+        </a>
+    </li>
+                                                        <li class="dropdown-item more-menu-trigger" data-control-id="sup">
+        <a id="rte-sup" class="item-link" title="Superscript" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon icon-check hidden"></span>
+Superscript
+        </a>
+    </li>
+                                                    <li class="dropdown-item more-menu-trigger" data-control-id="monospace">
+        <a id="rte-monospace" class="item-link" title="Format text with monospaced font" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon icon-check hidden"></span>
+Monospace
+        </a>
+    </li>
+
+                                                                                                                    </ul>
+                                </div>
+                                <div class="grouped-dropdown-item">
+                                    <ul>
+                                            <li class="dropdown-item more-menu-trigger no-icon" data-format="removeformat">
+        <a id="rte-removeformat" class="item-link" title="Clears formatting on currently selected text" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+            Clear Formatting
+        </a>
+    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <ul class="toolbar-group">
+                    
+                <li class="toolbar-item" id="rte-button-bullist">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Bullet list (Ctrl+Shift+B)" data-control-id="bullist">
+                <span class="icon icon-bullist ">Bullet list</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item" id="rte-button-numlist">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Numbered list (Ctrl+Shift+N)" data-control-id="numlist">
+                <span class="icon icon-numlist ">Numbered list</span>
+        </a>
+    </li>
+                </ul>
+
+                <ul class="toolbar-group">
+                    
+                <li class="toolbar-item" id="rte-button-outdent">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Outdent" data-control-id="outdent">
+                <span class="icon icon-outdent ">Outdent</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item" id="rte-button-indent">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Indent" data-control-id="indent">
+                <span class="icon icon-indent ">Indent</span>
+        </a>
+    </li>
+                </ul>
+
+                <ul class="toolbar-group">
+                    
+                <li class="toolbar-item" id="rte-button-justifyleft">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Align left" data-control-id="justifyleft">
+                <span class="icon icon-justifyleft ">Align left</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item" id="rte-button-justifycenter">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Align center" data-control-id="justifycenter">
+                <span class="icon icon-justifycenter ">Align center</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item" id="rte-button-justifyright">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Align right" data-control-id="justifyright">
+                <span class="icon icon-justifyright ">Align right</span>
+        </a>
+    </li>
+                </ul>
+
+                <ul class="toolbar-group">
+                    <li class="toolbar-item">
+                        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" id="rte-button-link" data-control-id="linkbrowserButton" title="Insert Link (Ctrl+K)">
+                                <span class="icon icon-link "></span>
+                            <span class="trigger-text">Link</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="toolbar-group">
+                    <li class="toolbar-item toolbar-dropdown" id="insert-table-dropdown">
+                        <div class="aui-dd-parent">
+                            <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" class="toolbar-trigger aui-dd-trigger" id="rte-button-insert-table" title="Insert Table">
+                                    <span class="icon icon-table "></span>
+                                <span class="dropdown-text">Table</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+
+                            <div id="table-picker-container" class="hidden">
+                                <div class="table-picker-box" title="Hold SHIFT for a table without a heading.">
+                                    <div class="table-picker-background">
+                                        <div class="picker picker-cell"></div>
+                                        <div class="picker picker-heading heading"></div>
+                                        <div class="picker picker-selected-cell"></div>
+                                        <div class="picker picker-selected-heading heading"></div>
+                                    </div>
+                                    <p class="desc"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="toolbar-group">
+                    <li class="toolbar-item toolbar-dropdown" id="insert-menu">
+                        <div class="aui-dd-parent">
+                            <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" class="toolbar-trigger aui-dd-trigger" id="rte-button-insert" title="Insert">
+                                    <span class="icon icon-insert "></span>
+                                <span class="dropdown-text">Insert</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+
+                            <div class="aui-dropdown grouped hidden">
+                                <div class="grouped-dropdown-item">
+                                    <span class="assistive">Insert Content</span>
+                                    <ul id="content-insert-list">
+                                        
+        
+        <li class="dropdown-item content-image" data-command="mceConfimage">
+        <a id="rte-insert-image" class="item-link" title="Insert Image (Ctrl+M)" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Image
+        </a>
+    </li>
+                                        
+        
+        <li class="dropdown-item content-link" data-control-id="linkbrowserButton">
+        <a id="rte-insert-link" class="item-link" title="Insert Link (Ctrl+K)" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Link
+        </a>
+    </li>
+                                        
+    
+        <li class="dropdown-item content-attachment" data-command="mceConfAttachments">
+        <a id="rte-insert-attachment" class="item-link" title="Insert Attachment" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Attachment
+        </a>
+    </li>
+                                        
+    
+        <li class="dropdown-item content-symbol" data-command="confCharmap">
+        <a id="rte-insert-symbol" class="item-link" title="Insert Symbol" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Symbol
+        </a>
+    </li>
+                                        
+    
+        <li class="dropdown-item content-emoticon" data-command="mceEmotion">
+        <a id="rte-insert-emoticon" class="item-link" title="Insert Emoticon" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Emoticon
+        </a>
+    </li>
+                                        
+        
+        <li class="dropdown-item content-wikimarkup" data-command="InsertWikiMarkup">
+        <a id="rte-insert-wikimarkup" class="item-link" title="Insert Wiki Markup (Ctrl+Shift+D)" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Wiki Markup
+        </a>
+    </li>
+                                        
+    
+        <li class="dropdown-item content-hr" data-command="InsertHorizontalRule">
+        <a id="rte-insert-hr" class="item-link" title="Insert horizontal rule" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Horizontal rule
+        </a>
+    </li>
+                                    </ul>
+                                </div>
+                                <div class="grouped-dropdown-item">
+                                    <span class="assistive">tinymce.confluence.insert_menu.macro_desc</span>
+                                    <ul id="macro-insert-list">
+                                                                                                                                                                                <li class="dropdown-item macro-info" data-macro-name="info">
+        <a id="info" class="item-link" title="Insert &#39;Info&#39; macro" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Info
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-jiralink" data-macro-name="jiralink">
+        <a id="jiralink" class="item-link" title="Insert &#39;JIRA Issue&#39; macro" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ JIRA Issue
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-status" data-macro-name="status">
+        <a id="status" class="item-link" title="Insert &#39;Status&#39; macro" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Status
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-gallery" data-macro-name="gallery">
+        <a id="gallery" class="item-link" title="Insert &#39;Gallery&#39; macro" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Gallery
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-tasklist" data-macro-name="tasklist">
+        <a id="tasklist" class="item-link" title="Insert &#39;Tasklist&#39; macro" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Tasklist
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-toc" data-macro-name="toc">
+        <a id="toc" class="item-link" title="Insert &#39;Table of Contents&#39; macro" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Table of Contents
+        </a>
+    </li>
+                                                                                                                            
+        
+        <li class="dropdown-item content-macro" data-command="mceConfMacroBrowser">
+        <a id="rte-insert-macro" class="item-link" title="Open the macro browser (Ctrl+Shift+A)" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">
+                <span class="icon "></span>
+ Other Macros
+        </a>
+    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+                <ul class="toolbar-group">
+                    
+                <li class="toolbar-item" id="rte-button-undo">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Undo (Ctrl+Z)" data-control-id="undo">
+                <span class="icon icon-undo ">Undo</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item" id="rte-button-redo">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Redo (Ctrl+Y)" data-control-id="redo">
+                <span class="icon icon-redo ">Redo</span>
+        </a>
+    </li>
+                </ul>
+
+                
+            </div>            <div class="toolbar-split toolbar-split-right">
+                <ul class="toolbar-group">
+                        <li class="toolbar-item" id="rte-button-searchreplace">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Find/Replace" data-control-id="searchreplace">
+                <span class="icon icon-searchreplace ">Find/Replace</span>
+        </a>
+    </li>
+                </ul>
+                <ul class="toolbar-group">
+                        <li class="toolbar-item" id="rte-button-help">
+        <a class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" title="Help" data-control-id="help">
+                <span class="icon icon-help ">Keyboard Shortcuts Help</span>
+        </a>
+    </li>
+                </ul>
+            </div>        </div>    </div>
+    <div id="wysiwyg" class="resize">
+        <div id="rte" class="cell editor-default">
+            <textarea id="wysiwygTextarea" name="wysiwygContent" class="hidden tinymce-editor"></textarea>
+        </div>
+    </div>
+    <div id="editor-html-source-container" class="hidden">
+        <textarea id="editor-html-source" class="monospaceInput"></textarea>
+    </div>
+
+    <div id="preview">
+                        <div id="previewArea" class="cell">
+        </div>
+    </div>
+
+    
+
+<div id="savebar-container">
+    <div id="rte-savebar" class="aui-toolbar">
+
+                    
+        
+        <div class="toolbar-split toolbar-split-row">
+            <div class="toolbar-split toolbar-split-left">
+            <ul class="toolbar-group">
+                                            </ul>
+                    </div>
+            <div class="toolbar-split toolbar-split-right">
+            <div class="toolbar-group" id="toolbar-group-minor-edit">
+                <ul class="toolbar-group toolbar-group-watch-page" id="toolbar-group-watch-page-after-comment">
+                    <li class="toolbar-item">
+                        <label for="watchPage">Watch this page</label>
+                        <input id="watchPage" name="watchPageAfterComment" value="true" type="checkbox" checked="checked">
+                    </li>
+                </ul>
+                                            </div>
+
+        
+            <ul class="toolbar-group toolbar-group-edit assistive">
+                <li class="toolbar-item">
+                    <a id="rte-button-edit" class="toolbar-trigger" title="Return To Edit Mode" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">&lt; Edit</a>
+                </li>
+            </ul>
+            <ul class="toolbar-group toolbar-group-preview">
+                <li class="toolbar-item">
+                    <a id="rte-button-preview" title="Preview" class="toolbar-trigger" href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#">Preview &gt;</a>
+                    <span id="wysiwygWaitImage" class="icon loading hidden">Loading…</span>
+                </li>
+            </ul>
+
+        
+            <ul class="toolbar-group">
+                <li class="toolbar-item">
+                                            <button class="toolbar-trigger" type="submit" title="Save" id="rte-button-publish" value="Save" name="confirm">Save</button>
+                                    </li>
+            </ul>
+            <ul class="toolbar-group">
+                <li class="toolbar-item toolbar-item-link">
+                    <button class="toolbar-trigger" type="submit" id="rte-button-cancel" value="Cancel" name="cancel">Cancel</button>
+                </li>
+            </ul>
+
+        </div>         </div>
+             </div> </div>
+
+ 
+            <div id="link-browser-tab-items" class="hidden">
+                <div title="Search" data-weight="10">search</div>
+            <div title="Recently Viewed" data-weight="20">recentlyviewed</div>
+            <div title="Attachments" data-weight="30">attachments</div>
+            <div title="Web Link" data-weight="40">weblink</div>
+            <div title="Advanced" data-weight="50">advanced</div>
+    </div>
+    
+
+
+<script type="text/x-template" title="dynamic-editor-metadata">
+            <meta name="ajs-content-type" content="comment">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/wiki/s/en_GB/3280/1/4.2.3/_">
+            <meta name="ajs-num-attachments" content="">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-content-id" content="304841003">
+            <meta name="ajs-save-drafts" content="false">
+            <meta name="ajs-action-locale" content="en_GB">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-new-page" content="">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-attachment-source-content-id" content="304841003">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-draft-type" content="">
+            <meta name="ajs-can-attach-files" content="true">
+                
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autocomplete" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autoformat" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    </script>
+
+
+<script type="text/x-template" title="tableForm">
+    <form id="tinymce-table-form" class="aui">
+        <div class="field-group">
+            <label for="rows">Rows</label>
+            <input id="rows" name="rows" type="text" size="3" autocomplete="off" value="{0}">
+        </div>
+        <div class="field-group">
+            <label for="cols">Columns</label>
+            <input id="cols" name="cols" type="text" size="3" autocomplete="off" value="{1}">
+        </div>
+        <div class="field-group hidden">
+            <input id="width" type="hidden" name="width" value="">
+            <label for="width">Width</label>
+        </div>
+        <div class="group">
+            <div class="checkbox">
+                <input id="table-heading-checkbox" class="checkbox" type="checkbox" name="heading" checked="checked" value="true">
+                <label for="table-heading-checkbox">First row is heading</label>
+            </div>
+        </div>
+        <div class="group hidden">
+            <div class="checkbox">
+                <input id="table-equal-width-columns-checkbox" class="checkbox" type="checkbox" name="equal-width-columns" value="false">
+                <label for="table-equal-width-columns-checkbox">Equal width columns</label>
+            </div>
+        </div>
+    </form>
+</script><script type="text/x-template" title="labels-dialog-div">
+        <div id="labels-dialog">
+        <div class="labels-editor">
+            <form method="GET" action="" id="add-labels-form">
+                <div id="labelOperationErrorContainer">
+                    <span class="error"><span class="errorMessage" id="labelOperationErrorMessage"></span></span>
+                </div>
+    
+                <div id="label-input-fields">
+                    <input autocomplete="off" id="labelsString" name="labelsString" value="">
+                    <input id="add-labels-editor-button" type="submit" class="add-labels" value="Add">
+                </div>
+                <div id="labelsAutocompleteList" class="aui-dd-parent resize-to-input" style="width: 417px"></div>
+                <div id="dialog-label-list">
+                    <!-- DIV placeholder for labels list, is copied into in labels-dialog.js -->
+                </div>
+                <div id="waitImageAndStatus">
+                    <img class="waiting" alt="Please wait" src="/wiki/s/en_GB/3280/1/_/images/icons/wait.gif">&nbsp;
+                    <span id="labelOperationStatus" class="smalltext"></span>
+                </div>
+                <div class="labels-tip"></div>
+            </form>
+        </div>
+        <div style="display: none;">
+            <div class="labels-section-content content-column"
+    		>
+	<div class="labels-content">
+		
+
+    </div>
+</div>        </div>
+    </div>
+</script>
+    <input type="hidden" name="atl_token" value="126b224861e6095a620146faa63442df742a7e8e">
+</div><div class="aui-popup aui-dialog" id="image-effects-dialog" style="margin-top: -205px; margin-left: -230px; width: 460px; height: 410px; z-index: 3002; display: none; background: rgb(255, 255, 255);"><div class="dialog-components"><h2 class="dialog-title">Add Image Effect</h2><ul class="dialog-page-menu" style="height: 314px; display: none;"><li class="page-menu-item selected"><button class="item-button">imgs</button></li></ul><div class="dialog-page-body"><div class="dialog-panel-body" style="height: 304px;"><div class="image-effects"><ul class="image-list"><li class="attached-image image-effect-preview image-effect-none"><div class="image-container"><img class="thumbnail" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/imgFilter.png" title="None" width="100" height="90" style="margin-top: 5px"></div><span class="caption filename" title="None">None</span></li><li class="attached-image image-effect-preview"><div class="image-container"><img class="thumbnail" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/imgFilter(1).png" title="Taped" width="100" height="90" style="margin-top: 5px"></div><span class="caption filename" title="Taped">Taped</span></li><li class="attached-image image-effect-preview"><div class="image-container"><img class="thumbnail" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/imgFilter(2).png" title="Instant Camera" width="100" height="90" style="margin-top: 5px"></div><span class="caption filename" title="Instant Camera">Instant Camera</span></li><li class="attached-image image-effect-preview"><div class="image-container"><img class="thumbnail" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/imgFilter(3).png" title="Curl Shadow" width="100" height="90" style="margin-top: 5px"></div><span class="caption filename" title="Curl Shadow">Curl Shadow</span></li><li class="attached-image image-effect-preview"><div class="image-container"><img class="thumbnail" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/imgFilter(4).png" title="Snapshot" width="100" height="90" style="margin-top: 5px"></div><span class="caption filename" title="Snapshot">Snapshot</span></li><li class="attached-image image-effect-preview"><div class="image-container"><img class="thumbnail" src="./GridWorld阶段2：基本任务 - 2014年软件工程实训 - SoYa Wiki_files/imgFilter(5).png" title="Drop Shadow" width="100" height="90" style="margin-top: 5px"></div><span class="caption filename" title="Drop Shadow">Drop Shadow</span></li></ul></div></div></div><div class="dialog-button-panel"><a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=304841003#" class="button-panel-link button-panel-cancel-link">Close</a></div></div></div></body></html>

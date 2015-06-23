@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project name="newCritter" default="run" basedir=".">
+	<target name="clean">
+		<delete file="NewCritter.class"/>
+		<delete file="NewCritterRunner.class"/>
+	</target>
+	<target name="compile" depends="clean">
+		<javac srcdir="." destdir=".">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</javac>
+
+	</target>
+	<target name="run" depends="compile">
+		<java classname="NewCritterRunner">
+			<classpath>
+				<pathelement path="gridworld.jar"/>
+			</classpath>
+		</java>
+	</target>
+</project>
+

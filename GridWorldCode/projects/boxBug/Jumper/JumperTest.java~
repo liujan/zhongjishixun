@@ -1,0 +1,89 @@
+import info.gridworld.actor.*;
+import info.gridworld.grid.*;
+
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class JumperTest
+{
+	private Jumper jp;
+	private ActorWorld world;
+	private Location jloc;
+	private Location loc;
+
+	@Before
+	public void setUp()
+	{
+	    world = new ActorWorld();
+	    jp = new Jumper();
+	}
+
+	@After
+	public void destroy()
+	{
+		Grid<Actor> gr = jp.getGrid();
+		gr.remove(jloc);
+		gr.remove(loc);
+	}
+	
+	@Test
+	public void testEdge()
+	{
+		jloc = new Location(1,3);
+        	world.add(jloc,jp);
+		assertEquals(false, jp.canMove());
+	}
+
+	@Test
+	public void testRock()
+	{
+		jloc = new Location(8,2);
+		loc = new Location(6,2);
+		world.add(loc, new Rock());
+		world.add(jloc, jp);
+		assertEquals(false, jp.canMove());
+	}
+
+	@Test
+	public void testFlower()
+	{
+		jloc = new Location(8,2);
+		loc = new Location(6,2);
+		world.add(jloc, jp);
+		world.add(loc, new Flower());
+		assertEquals(true, jp.canMove());
+	}
+
+	@Test
+	public void testBug()
+	{
+		jloc = new Location(5, 5);
+		loc = new Location(3, 5);
+		world.add(jloc, jp);
+		world.add(loc, new Bug());
+
+		assertEquals(false, jp.canMove());
+	}
+
+	@Test
+	public void testOverRock()
+	{
+		jloc = new Location(3, 2);
+		loc = new Location(2, 2);
+		world.add(jloc, jp);
+		world.add(loc, new Rock());
+
+		assertEquals(true, jp.canMove());
+	}
+
+	@Test
+	public void testMove()
+	{
+		jloc = new Location(5,2);
+		world.add(jloc, jp);
+		jp.act();
+		Location newloc = new Location(3, 2);
+		assertEquals(newloc, jp.getLocation());
+	}
+	
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<project name="Jump" default="srun" basedir=".">
+	<target name="JumperRunner">
+		<java classname="JumperRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="DancingBugRunner">
+		<java classname="DancingBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="ZBugRunner">
+		<java classname="ZBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="SpiralBugRunner">
+		<java classname="SpiralBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="BoxBugRunner">
+		<java classname="BoxBugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="BugRunner">
+		<java classname="BugRunner" fork="yes">
+			<classpath>
+				<pathelement path="gridworld.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="scompile">
+		<javac srcdir="projects/critters/SparseBoundedGrid" destdir="projects/critters/SparseBoundedGrid">
+			<classpath>
+				<pathelement path="__gridworld.jar" />
+				<pathelement path="."/>
+			</classpath>
+		</javac>
+	</target>
+	<target name="srun" depends="scompile" >
+		<java classname="SparseBoundedGridRunner" fork="yes">
+			<classpath>
+				<pathelement path="__gridworld.jar" />
+				<pathelement path="projects/critters/SparseBoundedGrid" />
+				<pathelement path="." />
+			</classpath>
+		</java>
+	</target>
+
+</project>
+

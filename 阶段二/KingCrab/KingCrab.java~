@@ -1,0 +1,43 @@
+import info.gridworld.actor.*;
+import info.gridworld.grid.*;
+
+import java.util.ArrayList;
+
+public class KingCrab extends CrabCritter
+{
+	public void processActors(ArrayList<Actor> actors)
+	{
+		Grid<Actor> gr = getGrid();
+		ArrayList<Location> locsNew = gr.getEmptyAdjacentLocations(getLocation());
+		for (Actor actor : actors)
+		{
+			Location loc = actor.getLocation();
+			if (!gr.isValid(loc))
+				continue;
+			ArrayList<Location> locs = gr.getEmptyAdjacentLocations(loc);
+
+			for (int i = 0 ;i < locs.size(); i++)
+			{
+				Location locNew = locs.get(i);
+				for (int j = 0; j < locsNew.size(); j++)
+				{
+					Location l = locsNew.get(j);
+					if (locNew.getRow() == l.getRow() && l.getCol() == locNew.getCol())
+					{
+						locs.remove(loc_);
+						i--;
+						break;
+					}
+				}
+			}
+			if (locs.size() == 0)
+			{
+				actor.removeSelfFromGrid();
+			}
+			else
+			{
+				actor.moveTo(locs.get(0));
+			}
+		}
+	}
+}

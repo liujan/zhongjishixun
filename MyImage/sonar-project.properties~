@@ -1,0 +1,18 @@
+#required metadata
+#projectKey是项目的唯一标识，不能重复
+#对于每一个part，我们只需修改projectKey, projectName, projectBaseDir这三项
+
+sonar.projectKey=MyImage
+sonar.projectName=MyImage
+sonar.projectVersion=1.0
+sonar.sourceEncoding=UTF-8
+sonar.modules=java-module
+
+#java-module
+java-module.sonar.projectName=Java Module
+java-module.sonar.language=java
+
+#.表示projectBaseDir指定的目录
+java-module.sonar.sources=src
+java-module.sonar.projectBaseDir=.
+

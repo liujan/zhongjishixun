@@ -1,0 +1,90 @@
+import info.gridworld.actor.*;
+import info.gridworld.grid.*;
+
+import java.util.*;
+
+public class SparseBoundedGrid1<E> extends AbstractGrid<E> {
+	//用来储存grid上的格子
+	private HashMap<Location, E> occupantMap;
+	//列数
+	private int cols;
+	//行数
+	private int rows;
+	
+	public SparseBoundedGrid2(int row, int col)
+	{
+		//初始化
+		rows = row;
+		cols = col;
+		occupantMap = new HashMap<Location, E>();
+	}
+	//返回某个位置上的元素
+	public E get(Location arg0) {
+		//如果该位置有效，则返回该位置上的元素
+		if (isValid(arg0))
+		{
+			return occupantMap.get(arg0);
+		}
+		//否则返回空
+		else if (null == arg0)
+		{
+			throw new NullPointerException("loc == null");
+		}
+		return null;
+	}
+
+	//返回列数
+	public int getNumCols() {
+		return  cols;
+	}
+
+	//返回行数
+	public int getNumRows() {
+		return rows;
+	}
+
+	//返回grid上被占据的位置
+	public ArrayList<Location> getOccupiedLocations() {
+		ArrayList<Location> locs = new ArrayList<Location>();
+		//遍历Map,将位置记录在locs中
+		for (Location loc : occupantMap.keySet())
+		{
+			locs.add(loc);
+		}
+		return locs;
+	}
+
+	//判断一个位置是否有效；如果该位置不为空，且在grid范围内，则有效；否则无效
+	public boolean isValid(Location arg0) {
+		if (null == arg0)
+			return false;
+		int row = arg0.getRow();
+		int col = arg0.getCol();
+		return (row >= 0 && row < rows) && (col >= 0 && col < cols);
+	}
+
+	//将新元素插入到某个位置中，并返回该位置上的旧元素
+	public E put(Location arg0, E arg1) {
+		//如果参数无效，则抛出异常
+		if (null == arg0)
+		{
+			throw new NullPointerException("loc == null");
+		}
+		if (null == arg1)
+		{
+			throw new NullPointerException("obj == null");
+		}
+		//插入并返回元素
+		return occupantMap.put(arg0, arg1);
+	}
+
+	//将某位置上的元素删掉，并将其返回
+	public E remove(Location arg0) {
+		if (null == arg0)
+		{
+			throw new NullPointerException("loc == null");
+		}
+		return occupantMap.remove(arg0);
+	}
+}
+
